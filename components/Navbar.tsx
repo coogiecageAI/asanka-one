@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { C, jk } from "@/lib/constants";
 
@@ -40,16 +41,18 @@ function NavItem({ label, href, active }: { label: string; href: string; active:
   );
 }
 
-function LogoMark({ size = 1 }: { size?: number }) {
+function LogoMark() {
   return (
     <Link href="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }} aria-label="Asanka.one home">
-      <svg width={52 * size} height={36 * size} viewBox="0 0 90 62" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M6,58 L20,8 L34,58 M10,37 L30,37" stroke={C.gold} strokeWidth={7} strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M6,58 L20,8 L34,58 M10,37 L30,37" stroke={C.blue} strokeWidth={3.5} strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M44,19 Q44,11 55,11 Q66,11 66,21 Q66,31 54,32 Q42,33 42,44 Q42,55 54,55 Q66,55 66,47" stroke={C.gold} strokeWidth={7} strokeLinecap="round" />
-        <path d="M44,19 Q44,11 55,11 Q66,11 66,21 Q66,31 54,32 Q42,33 42,44 Q42,55 54,55 Q66,55 66,47" stroke={C.blue} strokeWidth={3.5} strokeLinecap="round" />
-      </svg>
-      <div style={{ fontFamily: jk, fontWeight: 800, fontSize: 18 * size, letterSpacing: "-0.03em", color: "white", lineHeight: 1 }}>
+      <Image
+        src="/logo.png"
+        alt="Asanka.one logo"
+        width={44}
+        height={44}
+        style={{ objectFit: "contain" }}
+        priority
+      />
+      <div style={{ fontFamily: jk, fontWeight: 800, fontSize: 18, letterSpacing: "-0.03em", color: "white", lineHeight: 1 }}>
         asanka<span style={{ color: C.accent }}>.one</span>
       </div>
     </Link>
