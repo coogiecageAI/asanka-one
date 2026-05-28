@@ -348,9 +348,7 @@ export default function HomePage() {
       {/* Clients & Partners section */}
       <section style={{ background: "#ffffff", padding: "80px 32px" }} aria-label="Clients and Partners">
         <div style={{ maxWidth: 1200, margin: "0 auto", textAlign: "center" }}>
-          <h2 style={{ fontFamily: jk, fontSize: "clamp(24px,3vw,36px)", fontWeight: 800, color: C.navy, letterSpacing: "-0.03em", marginBottom: 48 }}>
-            Clients and Partners
-          </h2>
+          <Label>Clients and Partners</Label>
           <ClientLogoGrid />
           <p style={{ marginTop: 36, fontSize: 12, color: C.textLight, fontFamily: dm }}>
             Selected organizations represented through prior professional experience and engagements.
