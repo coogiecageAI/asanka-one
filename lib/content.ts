@@ -215,14 +215,14 @@ export const CONTENT = {
   contact: {
     meta: {
       title: "Contact | Asanka.one",
-      description: "Get in touch with Asanka for consulting, mentoring, strategy papers, tools, or strategic collaboration.",
+      description: "Get in touch with me for strategic collaborations, consulting engagements, interim or fractional roles, board advisory roles (including NED) or if you would like an experienced mentor.",
       ogTitle: "Contact Asanka | Start a Conversation",
       ogDescription: "Get in touch for consulting support, mentoring, strategy papers, or practical tools.",
     },
     hero: {
       label: "Contact",
       title: "Get in Touch",
-      body:  "Whether the need is consulting support, mentoring, strategy papers, or practical tools, a conversation is welcome.",
+      body:  "Whether the need is strategic advice, consulting support, execution remediation or mentoring, let's have a conversation and explore opportunities.",
     },
     email: "questions@asanka.one",
     quote: "Clear thinking starts with a good conversation.",
