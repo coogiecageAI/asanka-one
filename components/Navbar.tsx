@@ -43,12 +43,12 @@ function NavItem({ label, href, active }: { label: string; href: string; active:
 
 function LogoMark() {
   return (
-    <Link href="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }} aria-label="Asanka.one home">
+    <Link href="/" style={{ display: "flex", alignItems: "center", gap: 6, textDecoration: "none" }} aria-label="Asanka.one home">
       <Image
-        src="/logo.png"
+        src="/ADS_Logo_transparent.png"
         alt="Asanka.one logo"
-        width={44}
-        height={44}
+        width={64}
+        height={64}
         style={{ objectFit: "contain" }}
         priority
       />
