@@ -30,13 +30,13 @@ export const CONTENT = {
     },
     about: {
       stats: [
-        ["15+", "Years Experience"],
+        ["20+", "Years Experience"],
         ["50+", "Engagements"],
-        ["9",   "Major Clients"],
-        ["3",   "Continents"],
+        ["10",   "Major Clients"],
+        ["4",   "Continents"],
       ] as [string, string][],
-      heading: "Experienced in strategy, finance, governance, and transformation.",
-      body: "A strategic and management consultant with experience across banking, finance, governance, regulatory transformation, and business advisory. I help people and organizations simplify complexity, align around what matters, and move forward with clarity and purpose.",
+      heading: "Experienced in strategy, advisory, and execution.",
+      body: "A strategic management consultant with experience across stategy development, corporate finance, risk management, corporate governance, regulatory remediation, enterprise-wide transformation, and business advisory. I help people and organizations simplify complexity, focus what matters, be adaptable, innovate and move forward with clarity and purpose to thrive to achieve excellence.",
       link: "Explore My Background",
       linkHref: "/about",
     },
