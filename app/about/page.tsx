@@ -1,32 +1,28 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { C, jk, dm } from "@/lib/constants";
+import { CONTENT } from "@/lib/content";
 import PageHero from "@/components/PageHero";
 import Label from "@/components/ui/Label";
 import Button from "@/components/ui/Button";
 
+const a = CONTENT.about;
+
 export const metadata: Metadata = {
-  title: "About | Asanka.one",
-  description:
-    "Learn about Asanka's background across banking, finance, governance, business advisory, and transformation, and how that experience supports consulting and mentoring.",
-  openGraph: {
-    title: "About Asanka | Strategy, Finance, Governance & Transformation",
-    description:
-      "Learn about Asanka's background across banking, finance, governance, business advisory, and transformation.",
-  },
+  title: a.meta.title,
+  description: a.meta.description,
+  openGraph: { title: a.meta.ogTitle, description: a.meta.ogDescription },
   alternates: { canonical: "https://asanka.one/about" },
 };
-
-const WORKING_STYLE = ["Structured thinking", "Honest advice", "Practical delivery", "Clear communication"];
 
 export default function AboutPage() {
   return (
     <>
       <PageHero
         dark
-        label="About"
-        title="A career built at the intersection of finance, strategy, governance, and execution."
-        body="A strategic and management consulting background shaped by banking, finance, business advisory, governance, and transformation work in complex environments where clarity, judgment, and delivery matter."
+        label={a.hero.label}
+        title={a.hero.title}
+        body={a.hero.body}
       />
 
       <section style={{ background: C.cream, padding: "80px 32px" }}>
@@ -49,8 +45,8 @@ export default function AboutPage() {
               <div style={{ fontFamily: jk, fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", marginBottom: 12 }}>
                 Get in Touch
               </div>
-              <a href="mailto:questions@asanka.one" style={{ color: C.accent, fontSize: 15, fontFamily: jk, textDecoration: "none" }}>
-                questions@asanka.one
+              <a href={`mailto:${a.background.email}`} style={{ color: C.accent, fontSize: 15, fontFamily: jk, textDecoration: "none" }}>
+                {a.background.email}
               </a>
             </div>
           </div>
@@ -60,18 +56,18 @@ export default function AboutPage() {
             <h2
               style={{ fontFamily: jk, fontSize: 32, fontWeight: 800, color: C.navy, letterSpacing: "-0.03em", marginBottom: 20, lineHeight: 1.15 }}
             >
-              From complexity to clarity.
+              {a.background.heading}
             </h2>
             <p style={{ color: C.textMid, fontSize: 16, lineHeight: 1.8, marginBottom: 24, fontFamily: dm }}>
-              Today, that experience is applied through independent consulting, practical tool-building, and mentoring. The focus is simple: help businesses and professionals make better decisions and move forward with confidence.
+              {a.background.body1}
             </p>
             <p style={{ color: C.textMid, fontSize: 16, lineHeight: 1.8, marginBottom: 40, fontFamily: dm }}>
-              Career experience spans banking, finance, governance, business advisory, and transformation work in complex institutional environments.
+              {a.background.body2}
             </p>
 
             <Label>How I Work</Label>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 40 }}>
-              {WORKING_STYLE.map((item) => (
+              {a.background.workingStyle.map((item) => (
                 <div
                   key={item}
                   style={{
@@ -94,7 +90,7 @@ export default function AboutPage() {
 
             <div style={{ background: C.navy, borderRadius: 14, padding: "32px 28px", marginBottom: 28 }}>
               <h3 style={{ fontFamily: jk, fontWeight: 800, color: "white", fontSize: 18, marginBottom: 16 }}>
-                Let&rsquo;s build what matters.
+                {a.background.ctaHeading}
               </h3>
               <Button href="/contact">Contact Me</Button>
             </div>

@@ -1,18 +1,16 @@
 import type { Metadata } from "next";
-import { C, jk, dm } from "@/lib/constants";
+import { C, jk } from "@/lib/constants";
+import { CONTENT } from "@/lib/content";
 import PageHero from "@/components/PageHero";
 import Label from "@/components/ui/Label";
 import ContactForm from "./ContactForm";
 
+const c = CONTENT.contact;
+
 export const metadata: Metadata = {
-  title: "Contact | Asanka.one",
-  description:
-    "Get in touch with Asanka for consulting, mentoring, strategy papers, tools, or strategic collaboration.",
-  openGraph: {
-    title: "Contact Asanka | Start a Conversation",
-    description:
-      "Get in touch for consulting support, mentoring, strategy papers, or practical tools.",
-  },
+  title: c.meta.title,
+  description: c.meta.description,
+  openGraph: { title: c.meta.ogTitle, description: c.meta.ogDescription },
   alternates: { canonical: "https://asanka.one/contact" },
 };
 
@@ -21,9 +19,9 @@ export default function ContactPage() {
     <>
       <PageHero
         dark
-        label="Contact"
-        title="Get in Touch"
-        body="Whether the need is consulting support, mentoring, strategy papers, or practical tools, a conversation is welcome."
+        label={c.hero.label}
+        title={c.hero.title}
+        body={c.hero.body}
       />
 
       <section style={{ background: C.cream, padding: "80px 32px" }}>
@@ -52,10 +50,10 @@ export default function ContactPage() {
                 Email
               </div>
               <a
-                href="mailto:questions@asanka.one"
+                href={`mailto:${c.email}`}
                 style={{ color: C.accent, fontSize: 18, fontFamily: jk, fontWeight: 700, textDecoration: "none" }}
               >
-                questions@asanka.one
+                {c.email}
               </a>
             </div>
             <div
@@ -67,7 +65,7 @@ export default function ContactPage() {
               }}
             >
               <p style={{ fontFamily: jk, fontSize: 18, fontWeight: 700, color: C.navy, lineHeight: 1.5 }}>
-                &ldquo;Clear thinking starts with a good conversation.&rdquo;
+                &ldquo;{c.quote}&rdquo;
               </p>
             </div>
           </div>
