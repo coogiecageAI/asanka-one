@@ -354,21 +354,15 @@ export default function HomePage() {
 
       {/* Values strip */}
       <section style={{ background: C.cream, padding: "80px 32px", borderTop: "1px solid rgba(0,0,0,0.06)" }} aria-label="Values">
-        <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
+        <div style={{ maxWidth: 1000, margin: "0 auto", textAlign: "center" }}>
           <Label>{h.values.label}</Label>
-          <div style={{ display: "flex", justifyContent: "center", alignItems: "baseline", gap: 12, flexWrap: "wrap", marginBottom: 24 }}>
-            {h.values.items.map((v, i) => (
-              <span key={v}>
-                <span style={{ fontFamily: jk, fontSize: "clamp(26px,4vw,44px)", fontWeight: 800, color: i % 2 === 0 ? C.navy : C.accent, letterSpacing: "-0.03em" }}>{v}</span>
-                {i < h.values.items.length - 1 && (
-                  <span aria-hidden="true" style={{ fontFamily: jk, fontSize: "clamp(26px,4vw,44px)", fontWeight: 300, color: "rgba(11,25,41,0.18)", margin: "0 10px" }}>·</span>
-                )}
-              </span>
-            ))}
-          </div>
-          <p style={{ color: C.textMid, fontSize: 16, maxWidth: 480, margin: "0 auto", lineHeight: 1.7, fontFamily: dm }}>
-            {h.values.body}
-          </p>
+          <Image
+            src="/asankaone-values.png"
+            alt="Value Framework: Focus, Adapt, Innovate, Thrive"
+            width={1000}
+            height={400}
+            style={{ width: "100%", height: "auto", borderRadius: 16 }}
+          />
         </div>
       </section>
 
