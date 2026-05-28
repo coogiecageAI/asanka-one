@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const CLIENT_LOGOS = [
   { file: "Barclays_Bank.png",           name: "Barclays" },
-  { file: "hsbc.jpg",                    name: "HSBC" },
+  { file: "HSBC.jpg",                    name: "HSBC" },
   { file: "Deutsche_Bank.png",           name: "Deutsche Bank" },
   { file: "citibank.jpg",                name: "Citi" },
   { file: "shell.webp",                  name: "Shell" },
