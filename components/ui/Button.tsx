@@ -36,7 +36,7 @@ export default function Button({ children, href, onClick, ghost, light, style: s
   if (!ghost) {
     variantStyle = {
       background: hov ? "#00dfc8" : C.accent,
-      color: C.navy,
+      color: "white",
       transform: hov ? "translateY(-1px)" : "none",
     };
   } else if (light) {

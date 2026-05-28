@@ -50,6 +50,7 @@ function LogoMark() {
         width={64}
         height={64}
         style={{ objectFit: "contain" }}
+        unoptimized
         priority
       />
       <div style={{ fontFamily: jk, fontWeight: 800, fontSize: 18, letterSpacing: "-0.03em", color: "white", lineHeight: 1 }}>

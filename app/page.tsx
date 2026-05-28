@@ -6,6 +6,7 @@ import Label from "@/components/ui/Label";
 import Card from "@/components/ui/Card";
 import ArrowLink from "@/components/ui/ArrowLink";
 import Button from "@/components/ui/Button";
+import ClientLogoGrid from "@/components/ClientLogoGrid";
 
 export const metadata: Metadata = {
   title: "Home | Asanka.one",
@@ -48,8 +49,6 @@ const CAPABILITIES = [
   { l: "Deliver", d: "Translate plans into execution.", n: "03" },
   { l: "Develop", d: "Build long-term capability and growth.", n: "04" },
 ];
-
-const CLIENTS = ["Barclays", "Credit Suisse", "HSBC", "Deutsche Bank", "Citi Group", "Shell", "Genworth", "GE"];
 
 const VALUES = ["FOCUS", "ADAPT", "INNOVATE", "THRIVE"];
 
@@ -226,59 +225,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Client trust strip */}
-      <section
-        style={{
-          background: C.navyMid,
-          padding: "24px 32px",
-          borderBottom: "1px solid rgba(255,255,255,0.06)",
-        }}
-        aria-label="Clients"
-      >
-        <div
-          style={{
-            maxWidth: 1200,
-            margin: "0 auto",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexWrap: "wrap",
-            gap: 0,
-          }}
-        >
-          <span
-            style={{
-              color: "rgba(255,255,255,0.3)",
-              fontSize: 10,
-              fontWeight: 700,
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              fontFamily: jk,
-              marginRight: 32,
-              whiteSpace: "nowrap",
-            }}
-          >
-            Clients I&rsquo;ve Worked With
-          </span>
-          {CLIENTS.map((c, i) => (
-            <span
-              key={c}
-              style={{
-                color: "rgba(255,255,255,0.4)",
-                fontSize: 13,
-                fontWeight: 700,
-                letterSpacing: "0.04em",
-                fontFamily: jk,
-                padding: "4px 16px",
-                borderRight: i < CLIENTS.length - 1 ? "1px solid rgba(255,255,255,0.08)" : "none",
-                whiteSpace: "nowrap",
-              }}
-            >
-              {c}
-            </span>
-          ))}
-        </div>
-      </section>
 
       {/* About snapshot */}
       <section style={{ background: C.cream, padding: "100px 32px" }} aria-label="About">
@@ -399,21 +345,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Clients section */}
-      <section style={{ background: C.cream, padding: "80px 32px" }} aria-label="Client organizations">
+      {/* Clients & Partners section */}
+      <section style={{ background: "#ffffff", padding: "80px 32px" }} aria-label="Clients and Partners">
         <div style={{ maxWidth: 1200, margin: "0 auto", textAlign: "center" }}>
-          <Label>Clients</Label>
-          <h2 style={{ fontFamily: jk, fontSize: "clamp(24px,3vw,36px)", fontWeight: 800, color: C.navy, letterSpacing: "-0.03em", marginBottom: 40 }}>
-            Clients I&rsquo;ve Worked With
+          <h2 style={{ fontFamily: jk, fontSize: "clamp(24px,3vw,36px)", fontWeight: 800, color: C.navy, letterSpacing: "-0.03em", marginBottom: 48 }}>
+            Clients and Partners
           </h2>
-          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 16 }}>
-            {CLIENTS.map((c) => (
-              <div key={c} style={{ background: C.white, border: "1px solid rgba(0,0,0,0.07)", borderRadius: 10, padding: "16px 28px", fontFamily: jk, fontWeight: 700, fontSize: 14, color: C.textMid, letterSpacing: "0.02em" }}>
-                {c}
-              </div>
-            ))}
-          </div>
-          <p style={{ marginTop: 28, fontSize: 12, color: C.textLight, fontFamily: dm }}>
+          <ClientLogoGrid />
+          <p style={{ marginTop: 36, fontSize: 12, color: C.textLight, fontFamily: dm }}>
             Selected organizations represented through prior professional experience and engagements.
           </p>
         </div>
